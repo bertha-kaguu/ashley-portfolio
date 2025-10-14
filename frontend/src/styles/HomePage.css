@@ -1,0 +1,231 @@
+/* CSS for HomePage */
+
+/* Full-page background container */
+.home-body {
+  /* background-image is set via inline styles in HomePage.js */
+  background-size: cover;
+  background-position: center;
+  background: #b9bbb9; /* A simple, neutral background */
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 0.5s ease-in-out; /* Smooth transition for background */
+  position: relative; /* For the overlay */
+}
+
+/* Blurred overlay for the background */
+.home-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+  backdrop-filter: blur(8px); /* Blur effect */
+  z-index: 0;
+}
+
+/* Main slider container */
+.home-container {
+  position: relative;
+  z-index: 1; /* To be on top of the overlay */
+  width: 800px;
+  height: 400px;
+  background: #f5f5f5;
+  box-shadow: 0 30px 50px #dbdbdb;
+  border-radius: 20px;
+  display: block;
+}
+
+.home-container .slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 20px;
+}
+
+/* Default style for all slide items */
+.home-container .slide .item {
+  width: 200px;
+  height: 250px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #505050;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+/* The item that just slid out of view (now in the first position) */
+.slide .item:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Make it invisible */
+}
+
+/* The active, large slide item (in the second position) */
+.slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 20px;
+  width: 100%;
+  width: 70%;
+  height: 100%;
+  opacity: 1; /* Make it visible */
+}
+
+/* Positioning for the smaller thumbnail items */
+.slide .item:nth-child(3) {
+  left: 50%;
+  left:75%;
+}
+.slide .item:nth-child(4) {
+  left: calc(50% + 220px);
+  left: calc(75% + 220px);
+}
+.slide .item:nth-child(5) {
+  left: calc(50% + 440px);
+  left: calc(75% + 440px);
+}
+
+/* Hide items beyond the 5th */
+.slide .item:nth-child(n + 6) {
+  left: calc(50% + 660px);
+  left: calc(75% + 660px);
+  opacity: 0;
+}
+
+/* Content inside the active slide */
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Only show content for the active slide */
+.slide .item:nth-child(2) .content {
+  display: block;
+}
+
+/* Styles for the preview items (text instead of image) */
+.slide .item:nth-child(n + 3) {
+  background-image: none !important; /* Override inline style from JS */
+  background-color: #fff;
+}
+
+.slide .item:nth-child(n + 3) .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: static;
+  transform: none;
+  text-align: center;
+  color: #222;
+  background: none;
+  backdrop-filter: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide .item:nth-child(n + 3) .content .name {
+  animation: none;
+  opacity: 1;
+  font-size: 22px;
+}
+
+.slide .item:nth-child(n + 3) .content .des,
+.slide .item:nth-child(n + 3) .content button {
+  display: none;
+}
+/* Animations for the content text and button */
+.content .name {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.5s 1 forwards;
+}
+
+.content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.8s 1 forwards;
+}
+
+.content button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.673);
+  transition: all 0.5s;
+  animation: animate 1s ease-in-out 1.1s 1 forwards;
+  font-weight: bold;
+}
+
+.content button:hover {
+  background-color: rgb(255, 255, 255);
+  color: #121212;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+/* Next/Previous buttons */
+.button {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  z-index: 100;
+}
+
+.button button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #000;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.button button:hover {
+  background: #fff;
+  color: #000;
+}

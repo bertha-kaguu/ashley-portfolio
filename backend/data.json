@@ -1,0 +1,97 @@
+{
+    "personalInfo": {
+      "name": "Ashley Kaguu",
+      "title": "Frontend Developer",
+      "photo": "/images/profile.jpg",
+      "bio": "A motivated Computer Science student with a passion for creating secure, data-driven web applications and a strong foundation in software engineering.",
+      "specialization": "Frontend Development & Cybersecurity",
+      "motivation": "Eager to contribute technical expertise and innovative solutions to a forward-thinking technology team and build impactful digital experiences.",
+      "phone": "+254792642885",
+      "email": "ashleykaguu@gmail.com",
+      "linkedIn": "https://www.linkedin.com/in/ashley-kaguu-387280251/",
+      "github": "https://github.com/bertha-kaguu"
+    },
+    "homePage": {
+      "cards": [
+        {
+          "title": "About Me",
+          "description": "An introduction to my background, skills, and career aspirations.",
+          "image": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1074&auto=format&fit=crop",
+          "link": "/about"
+        },
+        {
+          "title": "Skills",
+          "description": "A detailed overview of my technical and soft skills.",
+          "image": "https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?q=80&w=1173&auto=format&fit=crop",
+          "link": "/skills"
+        },
+        {
+          "title": "Certifications",
+          "description": "A list of my professional certifications in cybersecurity and networking.",
+          "image": "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=1170&auto=format&fit=crop",
+          "link": "/certifications"
+        },
+        {
+          "title": "Projects",
+          "description": "A showcase of my academic and freelance projects.",
+          "image": "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?q=80&w=2070&auto=format&fit=crop",
+          "link": "/projects"
+        },
+        {
+          "title": "Contact",
+          "description": "Get in touch with me via WhatsApp or email.",
+          "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1169&auto=format&fit=crop",
+          "link": "/contact"
+        }
+      ]
+    },
+    "summary": "Detail-oriented and motivated Computer Science student with hands-on experience in developing secure, data-driven applications using PHP, JavaScript, and Java. Designed and implemented a healthcare appointment scheduling system that streamlined booking and improved system efficiency. Skilled in integrating databases and optimizing backend performance to enhance user experience. Certified in cybersecurity and networking by Cisco, with a strong foundation in software engineering and data analysis. Eager to contribute technical expertise and innovative solutions to a forward-thinking technology team.",
+    "projects": [
+      {
+        "role": "Freelance Software Developer",
+        "company": "Remote / Self-Employed",
+        "period": "January 2023 – Present",
+        "responsibilities": [
+          "Developed and maintained responsive, data-driven web applications using PHP, JavaScript, and MySQL.",
+          "Designed secure backend systems and integrated user authentication and database management features.",
+          "Collaborated with clients to understand requirements, propose technical solutions, and deliver projects on schedule.",
+          "Created dynamic interfaces and optimized performance for improved user experience and reliability."
+        ],
+        "achievement": "Delivered multiple freelance projects, including a Healthcare Appointment Scheduling System that automated patient booking and reduced administrative effort."
+      },
+      {
+        "role": "Academic Software Developer (Course Projects)",
+        "company": "Mount Kenya University",
+        "period": "January 2022 – Present",
+        "responsibilities": [
+          "Designed and implemented software solutions as part of coursework, focusing on real-world system challenges.",
+          "Built an Email Management Application using Java to automate user account creation and data handling.",
+          "Applied principles of object-oriented programming, software engineering, and cybersecurity in all project designs."
+        ],
+        "achievement": "Successfully deployed academic projects to GitHub, demonstrating full-stack development proficiency and version control best practices."
+      }
+    ],
+    "education": {
+      "degree": "Bachelor of Science in Computer Science",
+      "university": "Mount Kenya University, Thika, Kenya",
+      "period": "September 2022 – May 2025 (Expected)"
+    },
+    "skills": {
+      "languages": ["Python", "PHP", "Java", "JavaScript", "Bash"],
+      "frontend": ["HTML", "CSS3", "Bootstrap", "React", "Next.js"],
+      "databases": ["MySQL", "MongoDB", "PostgreSQL", "SQL Server"],
+      "tools": ["Git", "Docker", "Kubernetes", "Google Cloud Platform (GCP)", "Firebase"],
+      "softSkills": ["Creative thinking", "Communication", "Collaboration", "Diversity of interest"]
+    },
+    "certifications": [
+      "Cisco Introduction to Cybersecurity",
+      "Cisco Networking Basics",
+      "Cisco Networking Devices and Initial Configuration",
+      "Cisco Endpoint Security",
+      "Cisco Network Defense",
+      "Cisco Python Essentials 1",
+      "Cisco Python Essentials 2"
+    ]
+  }
+  
+  
