@@ -14,16 +14,16 @@
     "homePage": {
       "cards": [
         {
+          "title": "Contact",
+          "description": "Get in touch with me via WhatsApp or email.",
+          "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1169&auto=format&fit=crop",
+          "link": "/contact"
+        },
+        {
           "title": "About Me",
           "description": "An introduction to my background, skills, and career aspirations.",
           "image": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1074&auto=format&fit=crop",
           "link": "/about"
-        },
-        {
-          "title": "Skills",
-          "description": "A detailed overview of my technical and soft skills.",
-          "image": "https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?q=80&w=1173&auto=format&fit=crop",
-          "link": "/skills"
         },
         {
           "title": "Certifications",
@@ -38,10 +38,10 @@
           "link": "/projects"
         },
         {
-          "title": "Contact",
-          "description": "Get in touch with me via WhatsApp or email.",
-          "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1169&auto=format&fit=crop",
-          "link": "/contact"
+          "title": "Skills",
+          "description": "A detailed overview of my technical and soft skills.",
+          "image": "https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?q=80&w=1173&auto=format&fit=crop",
+          "link": "/skills"
         }
       ]
     },
