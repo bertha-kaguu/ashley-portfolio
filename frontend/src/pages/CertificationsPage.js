@@ -5,7 +5,13 @@ const CertificationsPage = ({ certifications }) => {
     <section id="certifications" className="card">
       <h2>Certifications</h2>
       <ul>
-        {certifications.map((cert, index) => <li key={index}>{cert}</li>)}
+        {certifications.map((cert) => (
+          <li key={cert.name}>
+            <a href={`/certificates/${cert.url}`} target="_blank" rel="noopener noreferrer">
+              {cert.name}
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
   );

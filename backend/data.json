@@ -84,13 +84,34 @@
       "softSkills": ["Creative thinking", "Communication", "Collaboration", "Diversity of interest"]
     },
     "certifications": [
-      "Cisco Introduction to Cybersecurity",
-      "Cisco Networking Basics",
-      "Cisco Networking Devices and Initial Configuration",
-      "Cisco Endpoint Security",
-      "Cisco Network Defense",
-      "Cisco Python Essentials 1",
-      "Cisco Python Essentials 2"
+    {
+      "name": "Cisco Introduction to Cybersecurity",
+      "url": "cybersecurityintro.jpg"
+    },
+    {
+      "name": "Cisco Networking Basics",
+      "url": "networkingbasics.jpg"
+    },
+    {
+      "name": "Cisco Networking Devices and Initial Configuration",
+      "url": "n.devices&config.jpg"
+    },
+    {
+      "name": "Cisco Endpoint Security",
+      "url": "endpointsecurity.jpg"
+    },
+    {
+      "name": "Cisco Network Defense",
+      "url": "networkdefense.jpg"
+    },
+    {
+      "name": "Cisco Python Essentials 1",
+      "url": "python1.jpg"
+    },
+    {
+      "name": "Cisco Python Essentials 2",
+      "url": "python2.jpg"
+    }
     ]
   }
   
