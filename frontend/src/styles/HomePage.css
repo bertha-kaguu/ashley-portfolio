@@ -53,7 +53,6 @@ body {
   z-index: 1; /* To be on top of the overlay */
   width: 100%;
   height: 100%;
-  min-height: 600px;
   max-width: none;
   border-radius: 0;
   display: block;
@@ -63,14 +62,9 @@ body {
 .home-container .slide {
   width: 100%;
   height: 100%;
-  min-height: 100%;
   position: relative;
-  border-radius: 40px;
   display: flex;
-  gap: 30px;
-  padding: 20px;
   align-items: center;
-  box-sizing: border-box;
 }
 
 /* Default style for all slide items */
@@ -78,8 +72,8 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  width: 208px;
-  height: 350px;
+  width: 200px;
+  height: 300px;
   border-radius: 20px;
   box-shadow: 0 30px 50px #505050;
   background-position: 50% 50%;
@@ -93,11 +87,9 @@ body {
   top: 0;
   left: 0;
   transform: translate(0, 0);
-  border-radius: 20px;
   width: 100%;
   height: 100%;
   opacity: 0; /* Make it invisible */
-  width: 0;
 }
 
 /* The active, large slide item (in the second position) */
@@ -105,9 +97,8 @@ body {
   top: 0;
   left: 0;
   transform: translate(0, 0);
-  border-radius: 20px;
+  border-radius: 0;
   width: 100%;
-  flex-grow: 1;
   height: 100%;
   opacity: 1; /* Make it visible */
   box-shadow: none;
@@ -118,15 +109,15 @@ body {
   left: 55%;
 }
 .slide .item:nth-child(4) {
-  left: calc(55% + 238px);
+  left: calc(55% + 220px);
 }
 .slide .item:nth-child(5) {
-  left: calc(55% + 476px);
+  left: calc(55% + 440px);
 }
 
 /* Hide items beyond the 5th */
 .slide .item:nth-child(n + 6) {
-  left: calc(55% + 714px);
+  left: calc(55% + 660px);
   opacity: 0;
 }
 
@@ -141,8 +132,7 @@ body {
   transform: translate(0, -50%);
   font-family: system-ui;
   display: none;
-  padding: 50px;
-  border-radius: 10px;
+  padding: 0;
 }
 
 /* Only show content for the active slide */
@@ -162,18 +152,15 @@ body {
   transform: none;
   text-align: center;
   color: #FFFFFF;
-  backdrop-filter: none;
   width: 100%;
   height: 100%;
-  flex-shrink: 0;
   padding: 10px;
-  box-sizing: border-box;
 }
 
 .slide .item:nth-child(n + 3) .content .name {
   animation: none;
   opacity: 1;
-  font-size: 21px;
+  font-size: 20px;
   text-align: center;
   cursor: pointer; /* Makes the name appear clickable */
   transition: color 0.3s ease; /* Smooth transition for hover effect */
@@ -197,7 +184,7 @@ body {
 }
 
 .content .des {
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 10px;
   margin-bottom: 20px;
   opacity: 0;
@@ -260,17 +247,32 @@ body {
   color: #000;
 }
 
-/* Responsive adjustments for Mobile (e.g., Galaxy Note 412px) */
-@media screen and (max-width: 768px) {
-  .home-container {
-    width: 100%;
-    height: 100%;
-  }
-
+@media screen and (max-width: 1024px) {
   .item .content {
-    left: 20px;
-    width: calc(100% - 40px); /* Responsive width with padding */
-    top: 45%; /* Move up slightly */
+    left: 50px;
+    width: 400px; /* Shrink text width */
+  }
+  
+  .content .name {
+    font-size: 40px;
+  }
+  
+  /* Move thumbnails closer together */
+  .slide .item:nth-child(3) { left: 50%; }
+  .slide .item:nth-child(4) { left: calc(50% + 180px); }
+  .slide .item:nth-child(5) { display: none; } /* Hide 5th item on tablet to save space */
+  .slide .item:nth-child(n + 6) { display: none; }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .item .content {
+    left: 5%; /* Use percentage so it doesn't get cut off */
+    width: 90%; /* Fill the screen width */
+    top: 40%; /* Move up to make room for bottom thumbnail */
+    transform: translate(0, -50%);
+    text-align: center; /* Center text on mobile */
+    padding: 0 10px;
   }
 
   .content .name {
@@ -283,19 +285,23 @@ body {
 
   /* Adjust thumbnail size and position */
   .home-container .slide .item {
-    width: 100px;
-    height: 140px;
+    width: 120px;
+    height: 170px;
   }
 
   .slide .item:nth-child(3) {
-    left: auto;
-    right: 20px; /* Position thumbnail to the right */
-    top: 85%;    /* Move to bottom */
+    left: 50%;
+    transform: translate(-50%, 0); /* Center horizontally */
+    top: auto;
+    bottom: 80px  /* Move to bottom */
   }
 
   .slide .item:nth-child(4),
   .slide .item:nth-child(5),
   .slide .item:nth-child(n + 6) {
     display: none; /* Hide extra thumbnails on small screens to prevent clutter */
+  }
+  .button {
+    bottom: 20px;
   }
 }
