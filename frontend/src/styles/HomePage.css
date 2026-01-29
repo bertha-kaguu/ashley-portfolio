@@ -72,9 +72,9 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  width: 200px;
-  height: 300px;
-  border-radius: 20px;
+  width: 15vw;
+  height: 25vw;
+  border-radius: 1.5vw;
   box-shadow: 0 30px 50px #505050;
   background-position: 50% 50%;
   background-size: cover;
@@ -109,15 +109,15 @@ body {
   left: 55%;
 }
 .slide .item:nth-child(4) {
-  left: calc(55% + 220px);
+  left: 72%;
 }
 .slide .item:nth-child(5) {
-  left: calc(55% + 440px);
+  left: 89%;
 }
 
 /* Hide items beyond the 5th */
 .slide .item:nth-child(n + 6) {
-  left: calc(55% + 660px);
+  left: 106%;
   opacity: 0;
 }
 
@@ -125,8 +125,8 @@ body {
 .item .content {
   position: absolute;
   top: 50%;
-  left: 100px;
-  width: 500px;
+  left: 5%;
+  width: 45%;
   text-align: center;
   color: #eee;
   transform: translate(0, -50%);
@@ -154,13 +154,13 @@ body {
   color: #FFFFFF;
   width: 100%;
   height: 100%;
-  padding: 10px;
+  padding: 1vw;
 }
 
 .slide .item:nth-child(n + 3) .content .name {
   animation: none;
   opacity: 1;
-  font-size: 20px;
+  font-size: 1.5vw;
   text-align: center;
   cursor: pointer; /* Makes the name appear clickable */
   transition: color 0.3s ease; /* Smooth transition for hover effect */
@@ -176,7 +176,7 @@ body {
 }
 /* Animations for the content text and button */
 .content .name {
-  font-size: 50px;
+  font-size: 4vw;
   text-transform: uppercase;
   font-weight: bold;
   opacity: 0;
@@ -184,7 +184,7 @@ body {
 }
 
 .content .des {
-  font-size: 30px;
+  font-size: 1.5vw;
   margin-top: 10px;
   margin-bottom: 20px;
   opacity: 0;
@@ -192,11 +192,12 @@ body {
 }
 
 .content button {
-  padding: 10px 20px;
+  padding: 1vw 2vw;
+  font-size: 1.2vw;
   border: none;
   cursor: pointer;
   opacity: 0;
-  border-radius: 10px;
+  border-radius: 1vw;
   background-color: rgba(255, 255, 255, 0.673);
   transition: all 0.5s;
   animation: animate 1s ease-in-out 1.1s 1 forwards;
@@ -226,17 +227,16 @@ body {
   width: 100%;
   text-align: center;
   position: absolute;
-  bottom: 20px;
+  bottom: 5%;
   z-index: 100;
 }
 
 .button button {
-  width: 40px;
-  height: 35px;
-  border-radius: 8px;
-  border: none;
+  width: 4vw;
+  height: 3.5vw;
+  border-radius: 0.8vw;
   cursor: pointer;
-  margin: 0 5px;
+  margin: 0 0.5vw;
   border: 1px solid #000;
   transition: 0.3s;
   background: rgba(255, 255, 255, 0.7);
@@ -245,63 +245,4 @@ body {
 .button button:hover {
   background: #fff;
   color: #000;
-}
-
-@media screen and (max-width: 1024px) {
-  .item .content {
-    left: 50px;
-    width: 400px; /* Shrink text width */
-  }
-  
-  .content .name {
-    font-size: 40px;
-  }
-  
-  /* Move thumbnails closer together */
-  .slide .item:nth-child(3) { left: 50%; }
-  .slide .item:nth-child(4) { left: calc(50% + 180px); }
-  .slide .item:nth-child(5) { display: none; } /* Hide 5th item on tablet to save space */
-  .slide .item:nth-child(n + 6) { display: none; }
-}
-
-@media screen and (max-width: 768px) {
-  
-  .item .content {
-    left: 5%; /* Use percentage so it doesn't get cut off */
-    width: 90%; /* Fill the screen width */
-    top: 40%; /* Move up to make room for bottom thumbnail */
-    transform: translate(0, -50%);
-    text-align: center; /* Center text on mobile */
-    padding: 0 10px;
-  }
-
-  .content .name {
-    font-size: 32px; /* Smaller title for mobile */
-  }
-
-  .content .des {
-    font-size: 16px; /* Smaller description */
-  }
-
-  /* Adjust thumbnail size and position */
-  .home-container .slide .item {
-    width: 120px;
-    height: 170px;
-  }
-
-  .slide .item:nth-child(3) {
-    left: 50%;
-    transform: translate(-50%, 0); /* Center horizontally */
-    top: auto;
-    bottom: 80px  /* Move to bottom */
-  }
-
-  .slide .item:nth-child(4),
-  .slide .item:nth-child(5),
-  .slide .item:nth-child(n + 6) {
-    display: none; /* Hide extra thumbnails on small screens to prevent clutter */
-  }
-  .button {
-    bottom: 20px;
-  }
 }
