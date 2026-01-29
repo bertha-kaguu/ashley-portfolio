@@ -81,10 +81,6 @@
   
   
 @media screen and (min-width: 960px) {
-  .navbar {
-    margin-bottom: 2rem;
-  }
-
   .nav-menu {
     display: flex;
     flex-direction: row;
@@ -118,10 +114,6 @@
 }
 
 @media screen and (min-width: 430px) {
-  .navbar {
-    margin-bottom: 2rem;
-  }
-
   .nav-menu {
     display: flex;
     flex-direction: row;
